@@ -132,8 +132,13 @@ Run `insta-cli config` to view current settings or `insta-cli config edit` to op
 
 While we recommend the TypeScript version, the Python client offers a classic `curses`-based UI and unique plugins (like LaTeX rendering).
 
+
+[![PyPI](https://img.shields.io/pypi/v/insta-cli)](https://pypi.org/project/insta-cli/)
+[![PyPI Downloads](https://static.pepy.tech/badge/insta-cli)](https://pepy.tech/projects/insta-cli)
+![Python](https://img.shields.io/pypi/pyversions/insta-cli)
+
 ```bash
-pip install instagram-cli
+pip install insta-cli
 ```
 *Note: The Python binary links to `instagram`, whereas TypeScript links to `insta-cli`.*
 

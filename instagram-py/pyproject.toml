@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "instagram-cli"
+name = "insta-cli"
 version = "1.4.1"
 description = "Use Instagram in the terminal, the end of brainrot is here"
 authors = [
