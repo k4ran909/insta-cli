@@ -1,166 +1,167 @@
-# InstaCLI
+![Insta-CLI Header](resource/header.png)
 
-The ultimate weapon against brainrot. The fastest, lightest, and most portable Instagram client.
+
+> **The ultimate weapon against brainrot.**
+> The fastest, lightest, and most portable Instagram client for your terminal.
 
 $$
 \text{InstaCLI} = \lim_{\text{screen time} \to 0} \text{Productivity} \to \infty
 $$
 
-[![npm](https://img.shields.io/npm/v/@k4ran909/insta-cli?style=flat-square)](https://www.npmjs.com/package/@k4ran909/insta-cli)
-[![downloads](https://img.shields.io/npm/dm/@k4ran909/insta-cli?style=flat-square)](https://www.npmjs.com/package/@k4ran909/insta-cli)
-![PyPI](https://img.shields.io/pypi/v/instagram-cli)
-[![PyPI Downloads](https://static.pepy.tech/badge/instagram-cli)](https://pepy.tech/projects/instagram-cli)
-![Python](https://img.shields.io/pypi/pyversions/instagram-cli)
-[![MIT license](https://img.shields.io/github/license/k4ran909/insta-cli.svg)](https://github.com/k4ran909/insta-cli/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/k4ran909/insta-cli.svg)](https://github.com/k4ran909/insta-cli/issues)
+[![npm](https://img.shields.io/npm/v/@k4ran909/insta-cli?style=flat-square&logo=npm&label=version)](https://www.npmjs.com/package/@k4ran909/insta-cli)
+[![downloads](https://img.shields.io/npm/dm/@k4ran909/insta-cli?style=flat-square&logo=npm)](https://www.npmjs.com/package/@k4ran909/insta-cli)
+[![License](https://img.shields.io/github/license/k4ran909/insta-cli?style=flat-square)](https://github.com/k4ran909/insta-cli/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/k4ran909/insta-cli?style=flat-square&logo=github)](https://github.com/k4ran909/insta-cli/issues)
 
 https://github.com/user-attachments/assets/3dd65afe-b0d7-4554-9b3c-1e37111ae27d
 
 > [!WARNING]
-> This project is not affiliated with, authorized, or endorsed by Instagram. This is an independent and unofficial project. Using it might violate Meta's Terms of Service. Use at your own risk.
+> **Disclaimer:** This project is not affiliated with, authorized, or endorsed by Instagram. This is an independent and unofficial project. Using it might violate Meta's Terms of Service. Use at your own risk.
 
-## What does it do?
+---
 
-Empower yourself to become a 10x Instagrammer by minimizing distractions, enabling 100% keyboard control, and accessing it from any terminal — whether in your VSCode editor or your Linux server.
+## 🚀 Why InstaCLI?
 
-- Chat with your friends without falling into endless brainrot
-- Stay updated & connected without being exploited for your attention
-- Focus on meaningful conversations and be productive
-- Full keyboard navigation and shortcuts, no mouse, no touchscreens
-- Celebrate the art and simplicity of **terminal UI (TUI)**
+Empower yourself to become a **10x Instagrammer** by minimizing distractions. Reclaim your attention span with an interface designed for meaningful connection, not doom-scrolling.
 
-## TypeScript Client
+-   🚫 **Anti-Brainrot:** Chat with friends without falling into the algorithmic void.
+-   ⚡ **High Performance:** Significantly faster and lighter than the web or mobile app.
+-   ⌨️ **Keyboard Centric:** 100% keyboard navigation—no mouse or touchscreens required.
+-   🖥️ **Cross-Platform:** Runs everywhere: Linux servers, macOS, Windows (CMD/PowerShell), and inside VSCode.
+-   🎨 **Modern TUI:** A beautiful, responsive terminal user interface built with React & Ink.
 
-We recommend using the TypeScript client whenever possible. It is more secure, performant, feature-rich, actively developed, and works on all platforms including Windows.
+---
 
-### Homebrew (macOS/Linux)
+## 📦 Installation
+
+We recommend the **TypeScript client** for the best performance, security, and feature support.
+
+### NPM (Recommended)
+
+Quickly install globally using `npm`:
+
+```bash
+npm install -g @k4ran909/insta-cli
+```
+
+### Homebrew (macOS / Linux)
+
+Install via our custom tap:
 
 ```bash
 brew tap supreme-gg-gg/tap
 brew install insta-cli
 ```
 
-The formula is available [here](https://github.com/k4ran909/homebrew-tap/blob/main/Formula/instagram-cli.rb).
+> **Note:** For development updates and other installation methods, check [DEVELOPMENT.md](./DEVELOPMENT.md).
 
-### NPM
+---
+
+## 🛠️ Usage
+
+Once installed, use the `insta-cli` command to access the tool.
+
+### Core Commands
+
+| Command | Description |
+| :--- | :--- |
+| `insta-cli` | Display title art and version info |
+| `insta-cli --help` | View all available commands and flags |
+| `insta-cli chat` | **Launch the main chat interface** |
+| `insta-cli feed` | View your feed (posts from follows) |
+| `insta-cli stories` | View stories from follows |
+| `insta-cli notify` | Check notifications (inbox, mentions, etc) |
+
+### Authentication
+
+| Command | Description |
+| :--- | :--- |
+| `insta-cli auth login` | Login interactively (use `--username` to skip prompt) |
+| `insta-cli auth switch <user>` | Switch between saved accounts |
+| `insta-cli auth whoami` | Show currently logged-in user |
+| `insta-cli auth logout` | Logout and clear local session |
+
+> [!TIP]
+> **Multi-Account Support:** Login to multiple accounts and switch between them instantly with `auth switch`.
+
+---
+
+## 💬 Chat Interface
+
+The chat interface is the heart of InstaCLI. Navigate your inbox and threads using your keyboard.
+
+**Navigation:**
+-   `↑` / `k`: Move Up
+-   `↓` / `j`: Move Down
+-   `Enter`: Open Thread / Send Message
+-   `Tab`: Autocomplete file paths
+
+**Chat Commands:**
+Inside a thread, use these commands:
 
 ```bash
-npm install -g @k4ran909/insta-cli
+:reply <text>               # Reply to the selected message
+:react <emoji | :name:>     # React to a message (e.g., :react :thumbsup:)
+:unsend                     # Unsend the selected message
+:upload <path>              # Upload an image or video
+:select                     # Toggle selection mode
 ```
 
-For other installation methods, please refer to the [TypeScript Client Documentation](./instagram-ts/DEVELOPMENT.md).
+> **Pro Tip:** Type `#` followed by a file path (e.g., `#./meme.png`) to quickly attach a file.
 
-### Key Features
+---
 
-- Full support for Windows, Linux, and macOS, modern React-based UI
-- Developer-friendly shortcuts, viewing feed and stories, in-terminal image rendering
-- Leverages realtime MQTT-based protocol used by Instagram app for instant notifications and chat
-- Highly performant and much faster than your GUI browser or touchscreen app
-- Works well in all terminal emulators, **including VSCode Integrated Terminal**
+## ⚙️ Configuration
 
-## Python Client
+Customize your experience. Config file is stored at `~/.insta-cli/config.ts.yaml`.
 
-> The Python client is the original implementation of `InstaCLI`.
+Run `insta-cli config` to view current settings or `insta-cli config edit` to open them.
+
+| Key | Default | Description |
+| :--- | :--- | :--- |
+| `image.protocol` | `"halfBlock"` | Image rendering protocol. Options: `ascii`, `braille`, `halfBlock`, `kitty`, `iterm2`, `sixel`. |
+| `feed.feedType` | `"list"` | Feed layout style. Options: `timeline`, `list`. |
+
+> **Image Rendering:** We auto-detect the best protocol for your terminal. If images look broken, try setting `image.protocol` manually. Note: `sixel` and `iterm2` require compatible terminals.
+
+---
+
+## 🐍 Python Client (Legacy)
+
+> The Python client (located in `./instagram/`) is the original implementation of InstaCLI.
+
+While we recommend the TypeScript version, the Python client offers a classic `curses`-based UI and unique plugins (like LaTeX rendering).
 
 ```bash
 pip install instagram-cli
 ```
-
-Note that Python links to the `instagram` command, while TypeScript links to `insta-cli`.
+*Note: The Python binary links to `instagram`, whereas TypeScript links to `insta-cli`.*
 
 > [!CAUTION]
-> We do not recommend using the TypeScript and Python client simultaneously with the same account to reduce the risk of account bans. We recommend using the TypeScript client when possible since it is much less likely to trigger Instagram's anti-bot mechanisms.
+> Avoid using both clients simultaneously with the same account to prevent flagging by Instagram's anti-bot systems.
 
-### Key Features
+---
 
-- Classic `curses`-based terminal UI, works well on Linux and macOS, nostalgic UNIX vibes...
-- Extends Instagram with powerful plugins like LaTeX rendering, chat summarisation (e.g. Ollama)
+## 🤝 Contributing
 
-For more information about the Python client, please refer to the [Python Client Documentation](./instagram/README.md). **The following documentation is for the Typescript client only.**
+Contributions are welcome!
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before getting started.
 
-## Commands
+**Note:** We do not accept contributions that add botting/automation features (spamming, scraping, etc.).
 
-The following commands will be available after installing the package:
+## 🐛 Reporting Issues
 
-```bash
-insta-cli                                  # display title art
-insta-cli --help                           # view available commands
+If you encounter bugs, please report them on [GitHub Issues](https://github.com/k4ran909/insta-cli/issues).
+Attach logs from `~/.insta-cli/logs/` to help us debug.
 
-# Authentication
-insta-cli auth login --username            # login with username and password
-insta-cli auth logout                      # logout and removes session
-insta-cli auth switch <username>           # switch to another saved account
-insta-cli auth whoami                      # display current default user
-
-# Core features
-insta-cli chat                             # start chat interface
-insta-cli feed                             # view posts from people you follow
-insta-cli stories                          # view stories from people you follow
-insta-cli notify                           # view notifications (inbox, followers, mentions)
-
-# Modify configuration
-insta-cli config                           # lists all config
-insta-cli config <key> <value>             # set config key to value
-insta-cli config edit                      # open config file in editor
-```
-
-> [!TIP]
-> You can easily manage multiple accounts with InstaCLI!
-> Your login for each account will be saved **locally** and you can switch between them using the `insta-cli auth switch <username>` command or run a certain command with a specific account using the `--username` flag.
-
-## Chat Commands
-
-Inside the chat interface and after selecting a thread, you can navigate all interface with 100% keyboard support. When messaging, the following commands are available:
-
-```bash
-# Select messages to perform actions
-:select
-:react <emoji | :emoji_name:>
-:reply <text>
-:unsend
-
-# Media Handling
-:upload <path-to-image-or-video>
-# Download command coming soon...
-
-# Navigation
-:k # go up
-:K # go to top
-:j # go down
-:J # go to bottom
-```
-
-> [!TIP]
-> You can quickly include text files or images in a message by using `#` followed by the file path. For example, `#path/to/file.txt` or `#path/to/image.png`.
-> Use `tab` and `enter` to autocomplete file paths. You can include emojis in messages with `:emoji_name:` e.g. `:thumbsup:` = 👍 (with fuzzy matching).
-
-### Configuration
-
-You can view and modify configuration with `insta-cli config`. The configuration file is located at `~/.insta-cli/config.ts.yaml`. The following are common configuration options:
-
-| Key            | Type   | Default     | Description                                                                                                 |
-| -------------- | ------ | ----------- | ----------------------------------------------------------------------------------------------------------- |
-| image.protocol | string | "halfBlock" | Protocol for rendering images. Options: "ascii", "halfBlock", "braille", "kitty", "iterm2", "sixel", or "". |
-| feed.feedType  | string | "list"      | Layout of feed display. Options: "timeline", "list", "".                                                    |
-
-> [!NOTE]
-> We automatically select the best image protocol based on your terminal. If you experience issues with image rendering, try changing the `image.protocol` setting. Make sure this is supported by your terminal (e.g. `sixel` and `iterm2` protocols won't work in Kitty).
-
-## Contributing
-
-We welcome contributors! Please see the comprehensive [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to get started, create issues, and submit pull requests. It is very important that you follow these instructions because we manage two different clients in the same repository. _InstaCLI is NOT meant to be used for bot-behaviours, we will not accept contributions that add such features._
-
-## Reporting Issues
-
-Occasionally, Instagram may update their API or protocols which can cause certain features to break. If you encounter any issues, please report them on our [GitHub Issues page](https://github.com/k4ran909/insta-cli/issues). Make sure to attach the relevant log files located at `~/.insta-cli/logs/` to help us diagnose and fix the problem quickly.
-
-### Sister projects
-
-We contributed the following extensions to the Ink ecosystem for building Terminal UI apps:
-
-- [Ink Picture, Ink-native image component](https://github.com/endernoke/ink-picture)
-- [Wax, Ink routing framework](https://github.com/endernoke/wax).
-
-## Star History
+## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=k4ran909/insta-cli&type=date&legend=top-left)](https://www.star-history.com/#k4ran909/insta-cli&type=date&legend=top-left)
+
+---
+
+### Sister Projects
+
+Check out our contributions to the Ink ecosystem:
+- [Ink Picture](https://github.com/endernoke/ink-picture) - Ink-native image component.
+- [Wax](https://github.com/endernoke/wax) - Ink routing framework.
