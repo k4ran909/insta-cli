@@ -13,7 +13,7 @@ $$
 [![License](https://img.shields.io/github/license/k4ran909/insta-cli?style=flat-square)](https://github.com/k4ran909/insta-cli/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/k4ran909/insta-cli?style=flat-square&logo=github)](https://github.com/k4ran909/insta-cli/issues)
 
-https://github.com/user-attachments/assets/3dd65afe-b0d7-4554-9b3c-1e37111ae27d
+
 
 > [!WARNING]
 > **Disclaimer:** This project is not affiliated with, authorized, or endorsed by Instagram. This is an independent and unofficial project. Using it might violate Meta's Terms of Service. Use at your own risk.
